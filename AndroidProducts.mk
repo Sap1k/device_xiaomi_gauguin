@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_gauguin.mk
+    $(LOCAL_DIR)/aosp_gauguin.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_gauguin-user \
-    evolution_gauguin-userdebug \
-    evolution_gauguin-eng
+    aosp_gauguin-user \
+    aosp_gauguin-userdebug \
+    aosp_gauguin-eng

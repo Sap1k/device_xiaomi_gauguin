@@ -8,18 +8,21 @@
 $(call inherit-product, device/xiaomi/gauguin/device.mk)
 
 # Inherit some common EvoX stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# GApps
+USE_GAPPS := true
+IS_PHONE := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-EVO_DONATE_URL := https://paypal.me/Sap1k
-EVO_MAINTAINER := Sap1k
-EVO_SUPPORT_URL := https://t.me/EvolutionXLavender
+
+# Maintainer strings
+ROHIE_MAINTAINER := Sap1k
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := evolution_gauguin
+PRODUCT_NAME := aosp_gauguin
 PRODUCT_DEVICE := gauguin
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
