@@ -17,6 +17,9 @@ $(call inherit-product, vendor/xiaomi/gauguin/gauguin-vendor.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Inherit any apps we might want to include
+$(call inherit-product-if-exists, packages/apps/RetroMusicPlayer/retro.mk)
+
 BOARD_BUILD_PRODUCT_IMAGE := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_SHIPPING_API_LEVEL := 29
